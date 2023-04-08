@@ -1,10 +1,12 @@
 import axios from "axios";
 import { useState } from "react";
 import style from "./Search.module.css";
+import searchIcon from "./icons8-search.gif"
 
 const SearchImage = () => {
   const [search, setSearch] = useState("");
   const [images, setImages] = useState([]);
+  const [IsMatch,setIsMAtch] = useState(false)
   const feachHandler = () => {
     let key = "34308323-8cfbd94959043e738daefeff4";
     axios
@@ -13,8 +15,10 @@ const SearchImage = () => {
       )
       .then((res) => {
         setImages(res.data.hits);
+        if(res.data.hits.length<1){
+          setIsMAtch(true)
+        }
       })
-
       .catch((error) => {
         console.log(error);
       });
@@ -30,16 +34,17 @@ const SearchImage = () => {
           placeholder="Enter any name for search images"
           onChange={searchHandler}
         />
-        <button onClick={feachHandler}>Feach</button>
+        <img  onClick={feachHandler} src={searchIcon} alt="search icon" />
+        {/* <button onClick={feachHandler}></button> */}
       </div>
 
       <div>
-        {images.length <= 0 && <h2>No Mathes Found...!!</h2>}
+        {images.length <= 0 && IsMatch && <h2>No Mathes Found...!!</h2>}
         {images.length <= 0 && (
-          <h3>
+          <p>
             Enter any name in search bar for searching any images releted to
-            that particular thing.Example =`{">"}` car,cat,dog.....!!
-          </h3>
+            that particular name .Example =`{">"}` car,cat,dog.....!!
+          </p>
         )}
         {images.map((img,index) => {
           return (

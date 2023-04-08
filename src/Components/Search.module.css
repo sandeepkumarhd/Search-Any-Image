@@ -1,59 +1,65 @@
-
-
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
-.main{
-    width: 100%;
-    /* background-color: rgb(201, 173, 136); */
-    height: auto;
+.main {
+  width: 100%;
+  height: auto;
 }
-.input_box{
-    width: 80%;
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
+.input_box {
+  width: 80%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
-.input_box input{
-    height: 6vh;
-    width: 90%;
-    border: none;
-    margin: auto 0.2rem;
-    background-color: aqua;
-
+.input_box input {
+  height: 6vh;
+  width: 70%;
+  border: none;
+  margin: auto 0.2rem;
+  background-color: aqua;
+  padding: 0rem 0.9rem;
+  font-size: 1rem;
+  border-radius: 0.4rem;
 }
-button{
-    height: 1.9rem;
-    width: 10rem;
-    font-size: 1rem;
-    border: none;
+.input_box input:focus-within {
+  border: 0.2rem solid rgb(250, 7, 7);
 }
-.images{
-    width: 100%;
-    height: auto;
-    /* background-color: rgb(238, 238, 248); */
+img {
+  height: 2.9rem;
+  width: 4rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  padding-left: 2rem;
 }
-.images img{
-    width: 100%;
-    height: auto;
+.images {
+  width: 100%;
+  height: auto;
 }
-.images div{
-    width: 90%;
-    height: auto;
-    background-color: rgb(230, 230, 247);
-    margin: 1rem auto;
-    text-align: center;
-    font-weight: bold;
-    box-shadow: 0rem 1rem 1rem 0rem ;
+.images img {
+  width: 100%;
+  height: auto;
 }
-h2{
-    text-align: center;
-    color: red;
+.images div {
+  width: 90%;
+  height: auto;
+  background-color: rgb(230, 230, 247);
+  margin: 1rem auto;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0rem 1rem 1rem 0rem;
 }
-h3{
-    text-align: center;
-    font-family:'Times New Roman', Times, serif;
+h2 {
+  text-align: center;
+  color: red;
+}
+p {
+  margin: auto;
+  width: 40%;
+  text-align: center;
+  font-size:1.4rem ;
+  font-family: Arial, Helvetica, sans-serif;
 }
